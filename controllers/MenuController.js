@@ -53,6 +53,10 @@ module.exports = class MenuController {
         process.exit();
       }
 
+    getContactCount(){
+        return this.contacts.length;
+    }  
+
     getDate(){
         const now = new Date();
         const year = now.getFullYear();
