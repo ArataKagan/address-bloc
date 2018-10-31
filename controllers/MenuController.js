@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const ContactController = require("./ContactController");
 
 module.exports = class MenuController {
     constructor(){
@@ -14,7 +15,7 @@ module.exports = class MenuController {
                 ]
             }
         ];
-        this.contacts = [];
+        this.book = new ContactController();
     }
 
     main(){
@@ -56,6 +57,10 @@ module.exports = class MenuController {
     getContactCount(){
         return this.contacts.length;
     }  
+
+    remindMe(){
+        return "Learning is a life-long pursuit";
+    }
 
     getDate(){
         const now = new Date();
